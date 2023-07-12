@@ -18,7 +18,9 @@ const updateWidgetsFx = createEffect<
 >(async ({ widgets, id }) => {
   const updateWidgets = [...widgets]
   const idx = updateWidgets.findIndex((item) => item.id === id)
-  await updateWidgets[idx].getData()
+  if (idx !== -1) {
+    await updateWidgets[idx].getData()
+  }
   return updateWidgets
 })
 
@@ -28,7 +30,9 @@ const updateWidgetsSettingsFx = createEffect<
 >(async ({ widgets, cityId, widgetId }) => {
   const updateWidgets = [...widgets]
   const idx = updateWidgets.findIndex((item) => item.id === widgetId)
-  await updateWidgets[idx].setSettings({ id: cityId })
+  if (idx !== -1) {
+    await updateWidgets[idx].setSettings({ id: cityId })
+  }
   return updateWidgets
 })
 
