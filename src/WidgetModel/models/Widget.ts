@@ -50,7 +50,7 @@ class WeatherWidget extends Widget implements IWeatherWidget {
 
   async getData(): Promise<void> {
     const res: { data: IWeatherResponse[] } = await axios.get(
-      `http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/${this.setting.id}?apikey=9vIj4kFdlAe9eeGqm8evc3ZA7mYLu4mE&language=ru-ru&details=true&metric=true`
+      `https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/${this.setting.id}?apikey=9vIj4kFdlAe9eeGqm8evc3ZA7mYLu4mE&language=ru-ru&details=true&metric=true`
     )
     const forecast = res.data[0]
     this.info = {
