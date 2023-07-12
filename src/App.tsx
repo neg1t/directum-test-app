@@ -34,10 +34,12 @@ const App: React.FC = () => {
   const onDeskDropEventHandler =
     (column: number) => (ev: DragAndDropEvent<HTMLDivElement>) => {
       ev.preventDefault()
-      widgetEvents.widgetChangeDesk({
-        id: currentWidget.id,
-        newColumnId: column
-      })
+      if (currentWidget) {
+        widgetEvents.widgetChangeDesk({
+          id: currentWidget.id,
+          newColumnId: column
+        })
+      }
     }
 
   const onSelectChangeHandler =
@@ -72,7 +74,7 @@ const App: React.FC = () => {
                       className='widget'
                     >
                       <select
-                        value={widget.setting.id}
+                        value={widget?.setting?.id}
                         className='widget__select'
                         onChange={onSelectChangeHandler(widget)}
                         name='city'

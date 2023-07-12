@@ -1,28 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es2022",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noResolve": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "sourceMap": true,
-    "allowJs": false,
-    "jsx": "react",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
     "lib": [
       "DOM",
+      "DOM.Iterable",
       "ESNext"
     ],
-    "esModuleInterop": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
     "baseUrl": "./",
-    "paths": {
-      "shared/*": [
-        "src/shared/*"
-      ],
-      "feature/*": [
-        "src/feature/*"
-      ],
-    }
   },
   "exclude": [
     "dist",

@@ -12,7 +12,7 @@ class Widget implements IWidget {
   readonly id: number
   public columnId: number
 
-  constructor(newId?: number) {
+  constructor(newId: number) {
     this.id = newId
     this.columnId = 1
   }
@@ -30,7 +30,7 @@ class WeatherWidget extends Widget implements IWeatherWidget {
   public setting: {
     id: string
   }
-  public info: { temperature: string; weatherInfo: string; icon: string }
+  public info!: { temperature: string; weatherInfo: string; icon: string }
   public selects: { id: string; label: string; key: TWeatherWidgetCity }[]
 
   constructor(newId: number) {

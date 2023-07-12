@@ -9,12 +9,12 @@ export interface IWidget {
   columnId: number
   newColumnId(columnId: number): void
   remove(): void
-  getData?(): Promise<void>
 }
 
 export interface IWeatherWidget extends IWidget {
   setting?: TWheatherSetting
-  setSettings?(setting: TWheatherSetting): Promise<void>
+  getData(): Promise<void>
+  setSettings(setting: TWheatherSetting): Promise<void>
   selects: { id: string; label: string; key: TWeatherWidgetCity }[]
   info: {
     temperature: string
