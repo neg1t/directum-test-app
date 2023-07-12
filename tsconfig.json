@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noResolve": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "react",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "shared/*": [
+        "src/shared/*"
+      ],
+      "feature/*": [
+        "src/feature/*"
+      ],
+    }
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

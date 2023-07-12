@@ -1,0 +1,87 @@
+#root {
+  max-width    : 1280px;
+  margin       : 0 auto;
+  // padding   : 2rem;
+  text-align   : center;
+}
+
+.desk-page {
+  .desk {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    gap            : 20px;
+
+    .column-card {
+      border-radius   : 10px;
+      box-shadow      : 0px 0px 6px white;
+      width           : 250px;
+      height          : 400px;
+      background-color: white;
+      color           : black;
+
+      &__widgets {
+        margin-top     : 20px;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        flex-direction : column;
+        gap            : 10px;
+        user-select    : none;
+        overflow-y     : auto;
+        max-height     : 350px;
+      }
+    }
+
+    .widget {
+      cursor        : grab;
+      border-radius : 10px;
+      position      : relative;
+      display       : flex;
+      flex-direction: column;
+      width         : 200px;
+      height        : 130px;
+      border        : 1px solid black;
+
+      &__select {
+        margin: 5px 0px 0px 10px;
+        width : 100px;
+      }
+
+      &__forecast {
+        &--title {
+          font-size  : 12px;
+          font-weight: normal;
+        }
+
+        &--temperature {
+          margin-top     : 10px;
+          display        : flex;
+          justify-content: space-around;
+          align-items    : center;
+        }
+      }
+
+      &__remove {
+        position        : absolute;
+        top             : 0px;
+        right           : 0px;
+        background-color: transparent;
+        border          : none;
+        cursor          : pointer;
+
+        img {
+          width : 20px;
+          height: 20px;
+        }
+      }
+
+    }
+  }
+
+  .widget-button {
+    color     : black;
+    margin-top: 20px;
+  }
+
+}
